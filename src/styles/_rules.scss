@@ -1,0 +1,21 @@
+.rules {
+    position: absolute;
+    right: 33px;
+    bottom: 33px;
+
+    @media (max-width: $mobile) {
+        right: 33%;
+        bottom: 56px;
+    }
+}
+
+.rules__button {
+    padding: 6px 36px;
+    border: 2px solid $gray-white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.rules__button__paragraph {
+    color: $gray-white;
+}

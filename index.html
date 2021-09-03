@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>дон дон зики</title>
+  </head>
+  <body>
+    <div id="rock-paper-scissors" style="height: 100%">
+      <header class="header">
+        <div class="center">
+          <div class="header-flex">
+            <div class="header__logo">
+             <h2>
+              Дон Дон Зики
+             </h2>
+            </div>
+            <div class="header__score">
+              <p class="header__score__paragraph">Очко</p>
+              <span class="header__score__pontuation score">0</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="cards-game">
+          <div class="center">
+            <div class="cards-game__bg-triangle">
+              <div
+                id="paper"
+                class="cards-game__bg-triangle__card absolute-paper"
+                data-card="paper"
+              >
+                <div class="cards-game__bg-triangle__card-bg bg-paper"></div>
+              </div>
+              <div
+                id="scissors"
+                class="cards-game__bg-triangle__card absolute-scissors"
+                data-card="scissors"
+              >
+                <div class="cards-game__bg-triangle__card-bg bg-scissors"></div>
+              </div>
+              <div
+                id="rock"
+                class="cards-game__bg-triangle__card absolute-rock"
+                data-card="rock"
+              >
+                <div class="cards-game__bg-triangle__card-bg bg-rock"></div>
+              </div>
+            </div>
+          </div>
+          <div class="cards-game__round hidden-result">
+            <div class="cards-game__round__game player">
+              <p class="cards-game__round__game__picked player">вы выбрали</p>
+              <div class="cards-game__round__game__before player">
+                <div
+                  class="
+                    cards-game__round__game__image
+                    round-bg
+                    player
+                  "
+                >
+                  <div
+                    class="
+                      cards-game__round__game__image-bg
+                      round-bg__image
+                      player
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="cards-game__round__box-winner">
+              <span class="cards-game__round__box-winner__winner"
+                >вы проиграли</span
+              >
+              <button onclick="playAgain()" class="cards-game__round__box-winner__play-again">
+                повторить
+              </button>
+            </div>
+            <div class="cards-game__round__game computer">
+              <p class="cards-game__round__game__picked computer">
+                компьютер выбрал
+              </p>
+              <div class="cards-game__round__game__before computer">
+                <div
+                  class="
+                    cards-game__round__game__image
+                    round-bg
+                    computer
+                  "
+                >
+                  <div
+                    class="
+                      cards-game__round__game__image-bg
+                      round-bg__image
+                      computer
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="rules">
+          <div class="rules__button">
+            <p class="rules__button__paragraph">правила</p>
+          </div>
+        </section>
+
+        <section class="modal-rules">
+          <div class="modal-rules__box">
+            <div class="modal-rules__box__bg">
+              <div class="modal-rules__box__nav">
+                <p class="modal-rules__box__nav__paragraph">правила</p>
+                <div class="modal-rules__box__nav__close"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./src/scripts/modal.js"></script>
+    <script src="./src/scripts/main.js"></script>
+  </body>
+</html>

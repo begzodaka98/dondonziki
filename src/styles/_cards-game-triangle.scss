@@ -1,0 +1,107 @@
+.cards-game__bg-triangle.hidden-game {
+  display: none;
+}
+
+.cards-game__bg-triangle {
+    display: block;
+    max-width: 300px;
+    height: 300px;
+    margin: 120px auto 0;
+    background-image: url(./assets/images/bg-triangle.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+    position: relative;
+  
+    @media (max-width: $mobile) {
+      max-width: 208px;
+      height: 220px;
+      margin-top: 134px;
+    }
+  }
+  
+  .cards-game__bg-triangle__card {
+    width: 150px;
+    height: 160px;
+    border: 25px solid;
+    border-radius: 100px;
+    background-color: $gray-white;
+    transform: rotateX(25deg);
+    cursor: pointer;
+  
+    @media (max-width: $mobile) {
+      width: 103px;
+      height: 108px;
+      border-width: 14px;
+    }
+  }
+  
+  .absolute-paper {
+    position: absolute;
+    top: -84px;
+    left: -91px;
+    border-color: $blue-4;
+    box-shadow: 0 10px 0 0 $blue-5;
+  
+    @media (max-width: $mobile) {
+      top: -48px;
+      left: -54px;
+      box-shadow: 0 7px 0 0 $blue-5;
+    }
+  }
+  
+  .absolute-scissors {
+    position: absolute;
+    top: -84px;
+    left: 188px;
+    border-color: $yellow-1;
+    box-shadow: 0 10px 0 0 $yellow-2;
+  
+    @media (max-width: $mobile) {
+      top: -48px;
+      left: 128px;
+      box-shadow: 0 7px 0 0 $yellow-2;
+    }
+  }
+  
+  .absolute-rock {
+    position: absolute;
+    bottom: -54px;
+    left: 50px;
+    border-color: $red-1;
+    box-shadow: 0 10px 0 0 $red-2;
+  
+    @media (max-width: $mobile) {
+      bottom: -17px;
+      left: 37px;
+      box-shadow: 0 7px 0 0 $red-2;
+    }
+  }
+  
+  .cards-game__bg-triangle__card-bg {
+    box-shadow: inset 0 10px 0 0 $gray-white;
+    filter: brightness(76%);
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 50%;
+  
+    @media (max-width: $mobile) {
+      box-shadow: inset 0 7px 0 0 $gray-white;
+    }
+  }
+  
+  .bg-paper {
+    background-image: url(./assets/images/icon-paper.svg);
+  }
+  
+  .bg-scissors {
+    background-image: url(./assets/images/icon-scissors.svg);
+  }
+  
+  .bg-rock {
+    background-image: url(./assets/images/icon-rock.svg);
+  }

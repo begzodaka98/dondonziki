@@ -1,0 +1,11 @@
+@import 'variables';
+@import 'fonts';
+@import 'global';
+
+#rock-paper-scissors {
+  @import 'center';
+  @import 'header';
+  @import 'cards-game';
+  @import 'rules';
+  @import 'modal-rules';
+}

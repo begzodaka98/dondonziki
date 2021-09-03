@@ -1,0 +1,27 @@
+// spacing
+$container_max_width: 700px;
+$medium_container_width: 649px;
+$minimum_container_width: 150px;
+$gutter_width: 0.5vw;
+
+// breakpoints
+$desktop: 1280px;
+$mobile: 1200px;
+
+//fonts
+$Barlow: 'Barlow Semi Condensed', sans-serif;
+
+//colors
+$blue-1: hsl(237, 49%, 15%);
+$blue-2: hsl(214, 47%, 23%);
+$blue-3: hsl(230, 89%, 65%);
+$blue-4: hsl(230, 89%, 62%);
+$blue-5: hsl(229, 64%, 46%);
+
+$yellow-1: hsl(40, 84%, 53%);
+$yellow-2: hsl(39, 89%, 49%);
+$red-1: hsl(349, 70%, 56%);
+$red-2: hsl(349, 71%, 52%);
+$gray: hsl(229, 25%, 31%);
+$gray-ligth: hsl(217, 16%, 45%);
+$gray-white: hsla(0, 0, 100%, 0.9);

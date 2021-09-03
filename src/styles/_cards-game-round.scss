@@ -1,0 +1,239 @@
+.cards-game__round.hidden-result {
+    display: none;
+}
+
+.cards-game__round {
+    max-width: 1015px;
+    display: flex;
+    height: 400px;
+    margin: 44px auto 0;
+    justify-content: center;
+
+    @media (max-width: $mobile) {
+        margin-top: 78px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+}
+
+.cards-game__round__game {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $mobile) {
+        width: 100%;
+        height: 190px;
+    }
+}
+
+.cards-game__round__game.player {
+    @media (max-width: $mobile) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+}
+
+.cards-game__round__game.computer {
+    @media (max-width: $mobile) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+}
+
+.cards-game__round__game__picked {
+    color: #fff;
+    font-size: 29px;
+    z-index: 1000;
+
+        @media (max-width: $mobile) {
+            order: 1;
+            font-size: 20px;
+        }
+}
+
+@keyframes fade-winner {
+    0%, 50% {
+        opacity: 1;
+    }
+
+    50%, 100% {
+        opacity: 0;
+    }
+}
+
+.cards-game__round__game__before.winner{
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 500px;
+        height: 500px;
+        background: radial-gradient($blue-1, $blue-2, $blue-1);
+        border-radius: 237px;
+        position: absolute;
+        z-index: 0;
+        top: -90px;
+        left: -100px;
+        animation: .5s 0s infinite alternate fade-winner;
+
+        @media(max-width: $mobile) {
+            width: 300px;
+            height: 300px;
+            top: -75px;
+            left: -85px;
+        }
+    }
+}
+
+.cards-game__round__game__image {
+    width: 230px;
+    height: 250px;
+    border: 34px solid hsla(0, 0, 100%, 0.1);
+    border-radius: 155px;
+    background-color: $blue-1;
+    opacity: 0.3;
+    transform: rotateX(25deg);
+    position: relative;
+    z-index: 100;
+
+        @media(max-width: $mobile) {
+            order: 0;
+            width: 100px;
+            height: 110px;
+        }
+}
+
+.round-bg {
+    border: 34px solid;
+    background-color: $gray-white;
+    opacity: 1;
+        
+        @media(max-width: $mobile) {
+            border-width: 15px;
+        }
+}
+
+.round-bg.picked-paper-border {
+    border-color: $blue-4;
+    box-shadow: 0 13px 0 0 $blue-5;
+
+        @media(max-width: $mobile) {
+            box-shadow: 0 5px 0 0 $blue-5;
+        }
+}
+
+.round-bg.picked-scissors-border {
+    border-color: $yellow-1;
+    box-shadow: 0 13px 0 0 $yellow-2;
+
+        @media(max-width: $mobile) {
+            box-shadow: 0 5px 0 0 $yellow-2;
+        }
+}
+
+.round-bg.picked-rock-border {
+    border-color: $red-1;
+    box-shadow: 0 13px 0 0 $red-2;
+
+        @media(max-width: $mobile) {
+            box-shadow: 0 5px 0 0 $red-2;
+        }
+}
+
+
+.round-bg__image{
+    box-shadow: inset 0 10px 0 0 $gray-white;
+    filter: brightness(76%);
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 50%;
+
+        @media(max-width: $mobile) {
+            box-shadow: inset 0 5px 0 0 $gray-white;
+        }
+}
+
+.round-bg__image.picked-paper-card {
+    background-image: url(./assets/images/icon-paper.svg);
+}
+
+.round-bg__image.picked-scissors-card {
+    background-image: url(./assets/images/icon-scissors.svg);
+}
+
+.round-bg__image.picked-rock-card {
+    background-image: url(./assets/images/icon-rock.svg);
+}
+
+@keyframes fade-winner {
+    0%, 30% {
+        opacity: 0;
+    }
+
+    30%, 50% {
+        opacity: 0.4;
+    }
+
+    50%, 80% {
+        opacity: 0.8;
+    }
+
+    80%, 100% {
+        opacity: 1;
+    }
+}
+
+.cards-game__round__box-winner {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    animation: 1s 0s fade-winner;
+}
+
+.cards-game__round__box-winner.active {
+    width: 300px;
+    height: 130px;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 160px;
+    z-index: 100;
+
+    @media (max-width: $mobile) {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+        margin-top: 40px;
+    }
+}
+
+.cards-game__round__box-winner__winner {
+    text-transform: uppercase;
+    font-size: 57px;
+    color: #fff;
+}
+
+.cards-game__round__box-winner__play-again {
+    width: 221px;
+    height: 50px;
+    color: $blue-2;
+    letter-spacing: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cards-game__round__box-winner__play-again:hover {
+    color: $red-1;
+}
